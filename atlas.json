@@ -10326,7 +10326,7 @@
     }
   },
   "paths": {
-    "\/v2/entity" : {
+    "/v2/entity" : {
       "post" : {
         "tags" : [ "EntityREST" ],
         "description" : "Create new entity or update existing entity in Atlas.\nExisting entity is matched using its unique guid if supplied or by its unique attributes eg: qualifiedName",
@@ -10735,7 +10735,7 @@
         }
       }
     },
-    "\/v2/entity/bulk" : {
+    "/v2/entity/bulk" : {
       "delete" : {
         "tags" : [ "EntityREST" ],
         "description" : "Bulk API to delete list of entities identified by its GUIDs",
@@ -11916,7 +11916,7 @@
         }
       }
     },
-    "\/v2/entity/bulk/classification" : {
+    "/v2/entity/bulk/classification" : {
       "post" : {
         "tags" : [ "EntityREST" ],
         "description" : "Bulk API to associate a tag to multiple entities.\nOption 1: List of GUIDs to associate a tag\nOption 2: Typename and list of uniq attributes for entities to associate a tag\nOption 3: List of GUIDs and Typename with list of uniq attributes for entities to associate a tag",
@@ -11941,7 +11941,7 @@
         }
       }
     },
-    "\/v2/entity/bulk/headers" : {
+    "/v2/entity/bulk/headers" : {
       "get" : {
         "tags" : [ "EntityREST" ],
         "operationId" : "getEntityHeaders",
@@ -12097,7 +12097,7 @@
         }
       }
     },
-    "\/v2/entity/bulk/setClassifications" : {
+    "/v2/entity/bulk/setClassifications" : {
       "post" : {
         "tags" : [ "EntityREST" ],
         "operationId" : "setClassifications",
@@ -12126,7 +12126,7 @@
         }
       }
     },
-    "\/v2/entity/bulk/uniqueAttribute/type/{typeName}" : {
+    "/v2/entity/bulk/uniqueAttribute/type/{typeName}" : {
       "get" : {
         "tags" : [ "EntityREST" ],
         "description" : "Bulk API to retrieve list of entities identified by its unique attributes.\n\nIn addition to the typeName path parameter, attribute key-value pair(s) can be provided in the following format\n\ntypeName=<typeName>&attr_1:<attrName>=<attrValue>&attr_2:<attrName>=<attrValue>&attr_3:<attrName>=<attrValue>\n\nNOTE: The attrName should be an unique attribute for the given entity-type\n\nThe REST request would look something like this\n\nGET /v2/entity/bulk/uniqueAttribute/type/hive_db?attr_0:qualifiedName=db1@cl1&attr_2:qualifiedName=db2@cl1",
@@ -12490,7 +12490,7 @@
         }
       }
     },
-    "\/v2/entity/businessmetadata/import" : {
+    "/v2/entity/businessmetadata/import" : {
       "post" : {
         "tags" : [ "EntityREST" ],
         "description" : "Upload the file for creating Business Metadata in BULK",
@@ -12613,7 +12613,7 @@
         }
       }
     },
-    "\/v2/entity/businessmetadata/import/template" : {
+    "/v2/entity/businessmetadata/import/template" : {
       "get" : {
         "tags" : [ "EntityREST" ],
         "description" : "Get the sample Template for uploading/creating bulk BusinessMetaData",
@@ -12635,7 +12635,7 @@
         }
       }
     },
-    "\/v2/entity/guid/{guid}" : {
+    "/v2/entity/guid/{guid}" : {
       "delete" : {
         "tags" : [ "EntityREST" ],
         "description" : "Delete an entity identified by its GUID.",
@@ -13741,7 +13741,7 @@
         }
       }
     },
-    "\/v2/entity/guid/{guid}/businessmetadata" : {
+    "/v2/entity/guid/{guid}/businessmetadata" : {
       "delete" : {
         "tags" : [ "EntityREST" ],
         "operationId" : "removeBusinessAttributes",
@@ -13812,7 +13812,7 @@
         }
       }
     },
-    "\/v2/entity/guid/{guid}/businessmetadata/{bmName}" : {
+    "/v2/entity/guid/{guid}/businessmetadata/{bmName}" : {
       "delete" : {
         "tags" : [ "EntityREST" ],
         "operationId" : "removeBusinessAttributes",
@@ -13888,7 +13888,7 @@
         }
       }
     },
-    "\/v2/entity/guid/{guid}/classification/{classificationName}" : {
+    "/v2/entity/guid/{guid}/classification/{classificationName}" : {
       "delete" : {
         "tags" : [ "EntityREST" ],
         "description" : "Deletes a given classification from an existing entity represented by a guid.",
@@ -13971,7 +13971,7 @@
         }
       }
     },
-    "\/v2/entity/guid/{guid}/classifications" : {
+    "/v2/entity/guid/{guid}/classifications" : {
       "get" : {
         "tags" : [ "EntityREST" ],
         "description" : "Gets the list of classifications for a given entity represented by a guid.",
@@ -14070,7 +14070,7 @@
         }
       }
     },
-    "\/v2/entity/guid/{guid}/header" : {
+    "/v2/entity/guid/{guid}/header" : {
       "get" : {
         "tags" : [ "EntityREST" ],
         "description" : "Get entity header given its GUID.",
@@ -14175,7 +14175,7 @@
         }
       }
     },
-    "\/v2/entity/guid/{guid}/labels" : {
+    "/v2/entity/guid/{guid}/labels" : {
       "delete" : {
         "tags" : [ "EntityREST" ],
         "description" : "delete given labels to a given entity",
@@ -14273,7 +14273,7 @@
         }
       }
     },
-    "\/v2/entity/uniqueAttribute/type/{typeName}" : {
+    "/v2/entity/uniqueAttribute/type/{typeName}" : {
       "delete" : {
         "tags" : [ "EntityREST" ],
         "description" : "Delete an entity identified by its type and unique attributes.\n\nIn addition to the typeName path parameter, attribute key-value pair(s) can be provided in the following format\n\nattr:<attrName>=<attrValue>\n\nNOTE: The attrName and attrValue should be unique across entities, eg. qualifiedName\n\nThe REST request would look something like this\n\nDELETE /v2/entity/uniqueAttribute/type/aType?attr:aTypeAttribute=someValue",
@@ -15373,7 +15373,7 @@
         }
       }
     },
-    "\/v2/entity/uniqueAttribute/type/{typeName}/classification/{classificationName}" : {
+    "/v2/entity/uniqueAttribute/type/{typeName}/classification/{classificationName}" : {
       "delete" : {
         "tags" : [ "EntityREST" ],
         "description" : "Deletes a given classification from an entity identified by its type and unique attributes.",
@@ -15399,7 +15399,7 @@
         }
       }
     },
-    "\/v2/entity/uniqueAttribute/type/{typeName}/classifications" : {
+    "/v2/entity/uniqueAttribute/type/{typeName}/classifications" : {
       "post" : {
         "tags" : [ "EntityREST" ],
         "description" : "Adds classification to the entity identified by its type and unique attributes.",
@@ -15465,7 +15465,7 @@
         }
       }
     },
-    "\/v2/entity/uniqueAttribute/type/{typeName}/header" : {
+    "/v2/entity/uniqueAttribute/type/{typeName}/header" : {
       "get" : {
         "tags" : [ "EntityREST" ],
         "description" : "Fetch AtlasEntityHeader given its type and unique attribute.\n\nIn addition to the typeName path parameter, attribute key-value pair(s) can be provided in the following format\n\nattr:<attrName>=<attrValue>\n\nNOTE: The attrName and attrValue should be unique across entities, eg. qualifiedName\n\nThe REST request would look something like this\n\nGET /v2/entity/uniqueAttribute/type/aType/header?attr:aTypeAttribute=someValue",
@@ -15570,7 +15570,7 @@
         }
       }
     },
-    "\/v2/entity/uniqueAttribute/type/{typeName}/labels" : {
+    "/v2/entity/uniqueAttribute/type/{typeName}/labels" : {
       "delete" : {
         "tags" : [ "EntityREST" ],
         "operationId" : "removeLabels",
@@ -15665,7 +15665,7 @@
         }
       }
     },
-    "\/v2/entity/{guid}/audit" : {
+    "/v2/entity/{guid}/audit" : {
       "get" : {
         "tags" : [ "EntityREST" ],
         "operationId" : "getAuditEvents",
@@ -15824,7 +15824,7 @@
         }
       }
     },
-    "\/v2/glossary" : {
+    "/v2/glossary" : {
       "get" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Retrieve all glossaries registered with Atlas",
@@ -16253,7 +16253,7 @@
         }
       }
     },
-    "\/v2/glossary/categories" : {
+    "/v2/glossary/categories" : {
       "post" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Create glossary category in bulk",
@@ -16488,7 +16488,7 @@
         }
       }
     },
-    "\/v2/glossary/category" : {
+    "/v2/glossary/category" : {
       "post" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Create glossary category",
@@ -16818,7 +16818,7 @@
         }
       }
     },
-    "\/v2/glossary/category/{categoryGuid}" : {
+    "/v2/glossary/category/{categoryGuid}" : {
       "delete" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Delete a glossary category",
@@ -17397,7 +17397,7 @@
         }
       }
     },
-    "\/v2/glossary/category/{categoryGuid}/partial" : {
+    "/v2/glossary/category/{categoryGuid}/partial" : {
       "put" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Partially update the glossary category",
@@ -17736,7 +17736,7 @@
         }
       }
     },
-    "\/v2/glossary/category/{categoryGuid}/related" : {
+    "/v2/glossary/category/{categoryGuid}/related" : {
       "get" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Get all related categories (parent and children)",
@@ -17799,7 +17799,7 @@
         }
       }
     },
-    "\/v2/glossary/category/{categoryGuid}/terms" : {
+    "/v2/glossary/category/{categoryGuid}/terms" : {
       "get" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Get all terms associated with the specific category",
@@ -17877,7 +17877,7 @@
         }
       }
     },
-    "\/v2/glossary/import" : {
+    "/v2/glossary/import" : {
       "post" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Upload glossary file for creating AtlasGlossaryTerms in bulk",
@@ -18000,7 +18000,7 @@
         }
       }
     },
-    "\/v2/glossary/import/template" : {
+    "/v2/glossary/import/template" : {
       "get" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Get sample template for uploading/creating bulk AtlasGlossaryTerm",
@@ -18022,7 +18022,7 @@
         }
       }
     },
-    "\/v2/glossary/term" : {
+    "/v2/glossary/term" : {
       "post" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Create a glossary term",
@@ -19231,7 +19231,7 @@
         }
       }
     },
-    "\/v2/glossary/term/{termGuid}" : {
+    "/v2/glossary/term/{termGuid}" : {
       "delete" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Delete a glossary term",
@@ -21275,7 +21275,7 @@
         }
       }
     },
-    "\/v2/glossary/term/{termGuid}/partial" : {
+    "/v2/glossary/term/{termGuid}/partial" : {
       "put" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Partially update the glossary term",
@@ -22493,7 +22493,7 @@
         }
       }
     },
-    "\/v2/glossary/terms" : {
+    "/v2/glossary/terms" : {
       "post" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Create glossary terms in bulk",
@@ -23314,7 +23314,7 @@
         }
       }
     },
-    "\/v2/glossary/terms/{termGuid}/assignedEntities" : {
+    "/v2/glossary/terms/{termGuid}/assignedEntities" : {
       "delete" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Remove the term assignment for the given list of entity headers",
@@ -23526,7 +23526,7 @@
         }
       }
     },
-    "\/v2/glossary/terms/{termGuid}/related" : {
+    "/v2/glossary/terms/{termGuid}/related" : {
       "get" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Get all related terms for a specific term",
@@ -23611,7 +23611,7 @@
         }
       }
     },
-    "\/v2/glossary/{glossaryGuid}" : {
+    "/v2/glossary/{glossaryGuid}" : {
       "delete" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Delete a glossary",
@@ -24140,7 +24140,7 @@
         }
       }
     },
-    "\/v2/glossary/{glossaryGuid}/categories" : {
+    "/v2/glossary/{glossaryGuid}/categories" : {
       "get" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Get the categories belonging to a specific glossary",
@@ -24388,7 +24388,7 @@
         }
       }
     },
-    "\/v2/glossary/{glossaryGuid}/categories/headers" : {
+    "/v2/glossary/{glossaryGuid}/categories/headers" : {
       "get" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Get the categories belonging to a specific glossary",
@@ -24458,7 +24458,7 @@
         }
       }
     },
-    "\/v2/glossary/{glossaryGuid}/detailed" : {
+    "/v2/glossary/{glossaryGuid}/detailed" : {
       "get" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Get a specific Glossary",
@@ -26434,7 +26434,7 @@
         }
       }
     },
-    "\/v2/glossary/{glossaryGuid}/partial" : {
+    "/v2/glossary/{glossaryGuid}/partial" : {
       "put" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Partially update the glossary",
@@ -26743,7 +26743,7 @@
         }
       }
     },
-    "\/v2/glossary/{glossaryGuid}/terms" : {
+    "/v2/glossary/{glossaryGuid}/terms" : {
       "get" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Get terms belonging to a specific glossary",
@@ -27577,7 +27577,7 @@
         }
       }
     },
-    "\/v2/glossary/{glossaryGuid}/terms/headers" : {
+    "/v2/glossary/{glossaryGuid}/terms/headers" : {
       "get" : {
         "tags" : [ "GlossaryREST" ],
         "description" : "Get term headers belonging to a specific glossary",
@@ -27655,7 +27655,7 @@
         }
       }
     },
-    "\/v2/lineage/uniqueAttribute/type/{typeName}" : {
+    "/v2/lineage/uniqueAttribute/type/{typeName}" : {
       "get" : {
         "tags" : [ "LineageREST" ],
         "description" : "Returns lineage info about entity.\n\nIn addition to the typeName path parameter, attribute key-value pair(s) can be provided in the following format\n\nattr:<attrName>=<attrValue>\n\nNOTE: The attrName and attrValue should be unique across entities, eg. qualifiedName",
@@ -28212,7 +28212,7 @@
         }
       }
     },
-    "\/v2/lineage/{guid}" : {
+    "/v2/lineage/{guid}" : {
       "get" : {
         "tags" : [ "LineageREST" ],
         "description" : "Returns lineage info about entity.",
@@ -29322,7 +29322,7 @@
         }
       }
     },
-    "\/v2/relationship" : {
+    "/v2/relationship" : {
       "post" : {
         "tags" : [ "RelationshipREST" ],
         "description" : "Create a new relationship between entities.",
@@ -29608,7 +29608,7 @@
         }
       }
     },
-    "\/v2/relationship/guid/{guid}" : {
+    "/v2/relationship/guid/{guid}" : {
       "delete" : {
         "tags" : [ "RelationshipREST" ],
         "description" : "Delete a relationship between entities using guid.",
@@ -29868,7 +29868,7 @@
         }
       }
     },
-    "\/v2/search/attribute" : {
+    "/v2/search/attribute" : {
       "get" : {
         "tags" : [ "DiscoveryREST" ],
         "description" : "Retrieve data for the specified attribute search query",
@@ -30708,7 +30708,7 @@
         }
       }
     },
-    "\/v2/search/basic" : {
+    "/v2/search/basic" : {
       "get" : {
         "tags" : [ "DiscoveryREST" ],
         "description" : "Retrieve data for the specified fulltext query",
@@ -32389,7 +32389,7 @@
         }
       }
     },
-    "\/v2/search/dsl" : {
+    "/v2/search/dsl" : {
       "get" : {
         "tags" : [ "DiscoveryREST" ],
         "description" : "Retrieve data for the specified DSL",
@@ -33229,7 +33229,7 @@
         }
       }
     },
-    "\/v2/search/fulltext" : {
+    "/v2/search/fulltext" : {
       "get" : {
         "tags" : [ "DiscoveryREST" ],
         "description" : "Retrieve data for the specified fulltext query",
@@ -34064,7 +34064,7 @@
         }
       }
     },
-    "\/v2/search/quick" : {
+    "/v2/search/quick" : {
       "get" : {
         "tags" : [ "DiscoveryREST" ],
         "description" : "Attribute based search for entities satisfying the search parameters",
@@ -34765,7 +34765,7 @@
         }
       }
     },
-    "\/v2/search/relations" : {
+    "/v2/search/relations" : {
       "get" : {
         "tags" : [ "DiscoveryREST" ],
         "description" : "Relationship search to search for relations(edges)",
@@ -35637,7 +35637,7 @@
         }
       }
     },
-    "\/v2/search/relationship" : {
+    "/v2/search/relationship" : {
       "get" : {
         "tags" : [ "DiscoveryREST" ],
         "description" : "Relationship search to search for related entities satisfying the search parameters",
@@ -36515,7 +36515,7 @@
         }
       }
     },
-    "\/v2/search/saved" : {
+    "/v2/search/saved" : {
       "get" : {
         "tags" : [ "DiscoveryREST" ],
         "operationId" : "getSavedSearches",
@@ -36740,7 +36740,7 @@
         }
       }
     },
-    "\/v2/search/saved/execute/guid/{guid}" : {
+    "/v2/search/saved/execute/guid/{guid}" : {
       "get" : {
         "tags" : [ "DiscoveryREST" ],
         "description" : "Attribute based search for entities satisfying the search parameters",
@@ -37157,7 +37157,7 @@
         }
       }
     },
-    "\/v2/search/saved/execute/{name}" : {
+    "/v2/search/saved/execute/{name}" : {
       "get" : {
         "tags" : [ "DiscoveryREST" ],
         "description" : "Attribute based search for entities satisfying the search parameters",
@@ -37580,7 +37580,7 @@
         }
       }
     },
-    "\/v2/search/saved/{guid}" : {
+    "/v2/search/saved/{guid}" : {
       "delete" : {
         "tags" : [ "DiscoveryREST" ],
         "operationId" : "deleteSavedSearch",
@@ -37599,7 +37599,7 @@
         }
       }
     },
-    "\/v2/search/saved/{name}" : {
+    "/v2/search/saved/{name}" : {
       "get" : {
         "tags" : [ "DiscoveryREST" ],
         "operationId" : "getSavedSearch",
@@ -37677,7 +37677,7 @@
         }
       }
     },
-    "\/v2/search/suggestions" : {
+    "/v2/search/suggestions" : {
       "get" : {
         "tags" : [ "DiscoveryREST" ],
         "operationId" : "getSuggestions",
@@ -37714,7 +37714,7 @@
         }
       }
     },
-    "\/v2/types/businessmetadatadef/guid/{guid}" : {
+    "/v2/types/businessmetadatadef/guid/{guid}" : {
       "get" : {
         "tags" : [ "TypesREST" ],
         "description" : "Get the businessMetadata definition for the given guid",
@@ -37976,7 +37976,7 @@
         }
       }
     },
-    "\/v2/types/businessmetadatadef/name/{name}" : {
+    "/v2/types/businessmetadatadef/name/{name}" : {
       "get" : {
         "tags" : [ "TypesREST" ],
         "description" : "Get the businessMetadata definition by it's name (unique)",
@@ -38238,7 +38238,7 @@
         }
       }
     },
-    "\/v2/types/classificationdef/guid/{guid}" : {
+    "/v2/types/classificationdef/guid/{guid}" : {
       "get" : {
         "tags" : [ "TypesREST" ],
         "description" : "Get the classification definition for the given guid",
@@ -38506,7 +38506,7 @@
         }
       }
     },
-    "\/v2/types/classificationdef/name/{name}" : {
+    "/v2/types/classificationdef/name/{name}" : {
       "get" : {
         "tags" : [ "TypesREST" ],
         "description" : "Get the classification definition by it's name (unique)",
@@ -38774,7 +38774,7 @@
         }
       }
     },
-    "\/v2/types/entitydef/guid/{guid}" : {
+    "/v2/types/entitydef/guid/{guid}" : {
       "get" : {
         "tags" : [ "TypesREST" ],
         "description" : "Get the Entity definition for the given guid",
@@ -39442,7 +39442,7 @@
         }
       }
     },
-    "\/v2/types/entitydef/name/{name}" : {
+    "/v2/types/entitydef/name/{name}" : {
       "get" : {
         "tags" : [ "TypesREST" ],
         "description" : "Get the entity definition by it's name (unique)",
@@ -40110,7 +40110,7 @@
         }
       }
     },
-    "\/v2/types/enumdef/guid/{guid}" : {
+    "/v2/types/enumdef/guid/{guid}" : {
       "get" : {
         "tags" : [ "TypesREST" ],
         "description" : "Get the enum definition for the given guid",
@@ -40262,7 +40262,7 @@
         }
       }
     },
-    "\/v2/types/enumdef/name/{name}" : {
+    "/v2/types/enumdef/name/{name}" : {
       "get" : {
         "tags" : [ "TypesREST" ],
         "description" : "Get the enum definition by it's name (unique)",
@@ -40414,7 +40414,7 @@
         }
       }
     },
-    "\/v2/types/relationshipdef/guid/{guid}" : {
+    "/v2/types/relationshipdef/guid/{guid}" : {
       "get" : {
         "tags" : [ "TypesREST" ],
         "description" : "Get the relationship definition for the given guid",
@@ -40714,7 +40714,7 @@
         }
       }
     },
-    "\/v2/types/relationshipdef/name/{name}" : {
+    "/v2/types/relationshipdef/name/{name}" : {
       "get" : {
         "tags" : [ "TypesREST" ],
         "description" : "Get the relationship definition by it's name (unique)",
@@ -41014,7 +41014,7 @@
         }
       }
     },
-    "\/v2/types/structdef/guid/{guid}" : {
+    "/v2/types/structdef/guid/{guid}" : {
       "get" : {
         "tags" : [ "TypesREST" ],
         "description" : "Get the struct definition for the given guid",
@@ -41276,7 +41276,7 @@
         }
       }
     },
-    "\/v2/types/structdef/name/{name}" : {
+    "/v2/types/structdef/name/{name}" : {
       "get" : {
         "tags" : [ "TypesREST" ],
         "description" : "Get the struct definition by it's name (unique)",
@@ -41538,7 +41538,7 @@
         }
       }
     },
-    "\/v2/types/typedef/guid/{guid}" : {
+    "/v2/types/typedef/guid/{guid}" : {
       "get" : {
         "tags" : [ "TypesREST" ],
         "operationId" : "getTypeDefByGuid",
@@ -41669,7 +41669,7 @@
         }
       }
     },
-    "\/v2/types/typedef/name/{name}" : {
+    "/v2/types/typedef/name/{name}" : {
       "get" : {
         "tags" : [ "TypesREST" ],
         "description" : "Get type definition by it's name",
@@ -41801,7 +41801,7 @@
         }
       }
     },
-    "\/v2/types/typedef/name/{typeName}" : {
+    "/v2/types/typedef/name/{typeName}" : {
       "delete" : {
         "tags" : [ "TypesREST" ],
         "description" : "Delete API for type identified by its name.",
@@ -41824,7 +41824,7 @@
         }
       }
     },
-    "\/v2/types/typedefs" : {
+    "/v2/types/typedefs" : {
       "delete" : {
         "tags" : [ "TypesREST" ],
         "description" : "Bulk delete API for all types",
@@ -47281,7 +47281,7 @@
         }
       }
     },
-    "\/v2/types/typedefs/headers" : {
+    "/v2/types/typedefs/headers" : {
       "get" : {
         "tags" : [ "TypesREST" ],
         "description" : "Bulk retrieval API for all type definitions returned as a list of minimal information header",
